@@ -53,11 +53,11 @@ You can also use **Live Server** in Visual Studio Code for a better development 
 
 ### Desktop View
 
-![Desktop View] (screenshots/desktop image l1.png)
+![Desktop View] (screenshot/desktop image l1.png)
 
 ### Mobile View
 
-![Mobile View](screenshots/mobile image l1.png)
+![Mobile View](screenshot/mobile image l1.png)
 
 ## Internship Task
 
