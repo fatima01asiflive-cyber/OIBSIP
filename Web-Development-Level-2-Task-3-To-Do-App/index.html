@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="OASIS INFOBYTE Level 2 Task 3 - To-Do Web App">
+
+    <title>To-Do App | OASIS INFOBYTE</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app-container">
+
+        <!-- Header -->
+        <header class="app-header">
+
+            <div>
+            
+                <h1>My To-Do List</h1>
+
+                <p class="subtitle">
+                    Organize your tasks and stay productive.
+                </p>
+            </div>
+
+        </header>
+
+
+        <!-- Add Task -->
+        <section class="add-task-section">
+
+            <form id="task-form">
+
+                <input type="text" id="task-input" placeholder="What do you need to do?" maxlength="100"
+                    autocomplete="off" required>
+
+                <button type="submit" class="add-btn">
+                    + Add Task
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <span class="stat-number" id="pending-count">
+                    0
+                </span>
+
+                <span class="stat-label">
+                    Pending
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span class="stat-number" id="completed-count">
+                    0
+                </span>
+
+                <span class="stat-label">
+                    Completed
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span class="stat-number" id="total-count">
+                    0
+                </span>
+
+                <span class="stat-label">
+                    Total
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Pending Tasks -->
+        <section class="task-section">
+
+            <div class="section-heading">
+
+                <h2>Pending Tasks</h2>
+
+                <span id="pending-badge" class="badge">
+                    0
+                </span>
+
+            </div>
+
+
+            <div id="pending-tasks" class="task-list">
+                <!-- Pending tasks will be added by JavaScript -->
+            </div>
+
+
+            <div id="pending-empty" class="empty-state">
+
+                <div class="empty-icon">
+                    ✓
+                </div>
+
+                <h3>No pending tasks</h3>
+
+                <p>
+                    You're all caught up!
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Completed Tasks -->
+        <section class="task-section completed-section">
+
+            <div class="section-heading">
+
+                <h2>Completed Tasks</h2>
+
+                <span id="completed-badge" class="badge completed-badge">
+                    0
+                </span>
+
+            </div>
+
+
+            <div id="completed-tasks" class="task-list">
+                <!-- Completed tasks will be added by JavaScript -->
+            </div>
+
+
+            <div id="completed-empty" class="empty-state">
+
+                <div class="empty-icon">
+                    ○
+                </div>
+
+                <h3>No completed tasks</h3>
+
+                <p>
+                    Complete a task and it will appear here.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
