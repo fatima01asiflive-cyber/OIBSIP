@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | OASIS INFOBYTE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="dashboard-header">
+
+        <div>
+            <h1>My Dashboard</h1>
+            <p>Welcome to your account</p>
+        </div>
+
+        <button id="logout-btn" class="logout-btn">
+            Logout
+        </button>
+
+    </header>
+
+    <main class="dashboard-container">
+
+        <section class="welcome-card">
+            <div class="profile-icon">👋</div>
+
+            <div>
+                <h2>Welcome, <span id="dashboard-username">User</span>!</h2>
+                <p>You have successfully logged in.</p>
+            </div>
+        </section>
+
+        <section class="info-grid">
+
+            <div class="info-card">
+                <span>👤</span>
+                <h3>Username</h3>
+                <p id="user-name">Loading...</p>
+            </div>
+
+            <div class="info-card">
+                <span>📧</span>
+                <h3>Email</h3>
+                <p id="user-email">Loading...</p>
+            </div>
+
+            <div class="info-card">
+                <span>🔒</span>
+                <h3>Account Status</h3>
+                <p class="active-status">Active</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="auth.js"></script>
+</body>
+
+</html>

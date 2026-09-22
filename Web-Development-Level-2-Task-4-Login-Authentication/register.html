@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | OASIS INFOBYTE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="auth-container">
+        <div class="auth-card">
+
+            <div class="logo">
+                <span>👤</span>
+                <h1>Create Account</h1>
+                <p>Register a new account</p>
+            </div>
+
+            <form id="register-form">
+
+                <div class="form-group">
+                    <label for="register-username">Username</label>
+                    <input type="text" id="register-username" placeholder="Enter your username" minlength="3" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="register-email">Email Address</label>
+                    <input type="email" id="register-email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" placeholder="Minimum 8 characters and 1 number"
+                        required>
+                </div>
+
+                <div class="password-rules">
+                    <p>Password must contain:</p>
+                    <ul>
+                        <li>At least 8 characters</li>
+                        <li>At least 1 number</li>
+                    </ul>
+                </div>
+
+                <p id="register-message" class="message"></p>
+
+                <button type="submit" class="auth-btn">
+                    Create Account
+                </button>
+
+            </form>
+
+            <p class="switch-page">
+                Already have an account?
+                <a href="index.html">Login</a>
+            </p>
+
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+
+</html>
