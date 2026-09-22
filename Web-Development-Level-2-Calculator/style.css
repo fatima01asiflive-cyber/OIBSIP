@@ -1,0 +1,322 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+    --background: #eef2f7;
+    --calculator: #ffffff;
+
+    --display: #172033;
+    --display-text: #ffffff;
+
+    --text: #1d2939;
+
+    --button: #f5f7fa;
+    --border: #d9dee7;
+
+    --operator: #e9eefc;
+    --operator-text: #3157c8;
+
+    --action: #fceaea;
+    --action-text: #c43d3d;
+
+    --equals: #3157c8;
+    --equals-text: #ffffff;
+
+    --shadow: 0 18px 45px rgba(16, 24, 40, 0.12);
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: var(--background);
+
+    color: var(--text);
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+    border: none;
+
+    cursor: pointer;
+
+    font: inherit;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* Keyboard focus */
+
+button:focus-visible {
+    outline: 3px solid #8aa5ff;
+
+    outline-offset: 2px;
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.page {
+    min-height: 100vh;
+
+    display: grid;
+
+    place-items: center;
+
+    padding: 24px;
+}
+
+
+/* =========================
+   CALCULATOR
+========================= */
+
+.calculator {
+    width: min(100%, 390px);
+
+    background: var(--calculator);
+
+    border-radius: 24px;
+
+    padding: 22px;
+
+    box-shadow: var(--shadow);
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.heading {
+    margin-bottom: 16px;
+}
+
+.heading p {
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+
+    color: #667085;
+
+    margin-bottom: 6px;
+}
+
+.heading h1 {
+    font-size: 26px;
+}
+
+
+/* =========================
+   DISPLAY
+========================= */
+
+.display {
+    min-height: 125px;
+
+    background: var(--display);
+
+    color: var(--display-text);
+
+    border-radius: 17px;
+
+    padding: 18px;
+
+    margin-bottom: 16px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    text-align: right;
+
+    overflow: hidden;
+}
+
+
+/* Previous value */
+
+.previous-operand {
+    min-height: 24px;
+
+    color: #aeb8ca;
+
+    font-size: 16px;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* Current value */
+
+.current-operand {
+    margin-top: 4px;
+
+    font-size: clamp(30px, 8vw, 42px);
+
+    font-weight: 700;
+
+    line-height: 1.15;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* Error */
+
+.error-message {
+    min-height: 18px;
+
+    color: #ffb4b4;
+
+    font-size: 12px;
+
+    margin-top: 5px;
+}
+
+
+/* =========================
+   BUTTON GRID
+========================= */
+
+.buttons {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+
+/* =========================
+   ALL BUTTONS
+========================= */
+
+.buttons button {
+    min-height: 62px;
+
+    border-radius: 14px;
+
+    background: var(--button);
+
+    color: var(--text);
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    transition:
+        transform 0.12s ease,
+        filter 0.12s ease;
+}
+
+
+/* Hover */
+
+.buttons button:hover {
+    filter: brightness(0.97);
+}
+
+
+/* Click */
+
+.buttons button:active {
+    transform: scale(0.96);
+}
+
+
+/* =========================
+   OPERATOR BUTTONS
+========================= */
+
+.buttons .operator {
+    background: var(--operator);
+
+    color: var(--operator-text);
+}
+
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.buttons .action {
+    background: var(--action);
+
+    color: var(--action-text);
+}
+
+
+/* =========================
+   EQUAL BUTTON
+========================= */
+
+.buttons .equals {
+    background: var(--equals);
+
+    color: var(--equals-text);
+}
+
+
+/* =========================
+   ZERO BUTTON
+========================= */
+
+.buttons .zero {
+    grid-column: span 2;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 420px) {
+
+    .page {
+        padding: 14px;
+    }
+
+    .calculator {
+        padding: 16px;
+
+        border-radius: 20px;
+    }
+
+    .buttons {
+        gap: 8px;
+    }
+
+    .buttons button {
+        min-height: 58px;
+    }
+}
