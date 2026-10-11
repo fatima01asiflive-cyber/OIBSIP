@@ -1,0 +1,14 @@
+{
+  "name": "pizza-house-mern",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-stack pizza ordering, custom pizza builder, payments, order tracking, and inventory management.",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently -n API,WEB -c yellow,cyan \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client",
+    "seed": "npm run seed --prefix server",
+    "start": "npm run start --prefix server"
+  },
+  "devDependencies": { "concurrently": "^9.1.2" }
+}
